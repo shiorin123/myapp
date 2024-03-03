@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KOS</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    
+  <body>
+  <header>
+  <div class="KOS_title">
+   KOS
+   </div>
+   <div class="header-list">
+   <ul>
+      <li><%= link_to "TOP", new_user_registration_path %></li>
+      <li><%= link_to "NEW POST", tweets_new_path %></li>
+      <li><%= link_to "POSTS LIST", tweets_path %></li>
+      <li><%= link_to "LOGIN", new_user_session_path %></li>
+      <li><%= link_to "SIGN UP", new_user_registration_path %></li>
+      </ul>
+   </div>
+   
+  </header>
+  <main>
+   <%= yield%>
+  </main>
+   <footer>
+     <p>Copyright © KOS All Rights Reserved.</p>
+   </footer>
+  </body>
+</html>

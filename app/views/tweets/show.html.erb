@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag 'show', :media => "all" %>
+	<div class="bg_pattern Polka"></div>
+  
+
+<div class="lucky">
+  Tweet詳細  
+ </div>
+ 
+ <div class="tweet3">
+  <p><%= @tweet.name %></p>
+  <p><%= @tweet.created_at %></p>
+  <p><%= @tweet.store %></p>
+  <p><%= @tweet.created_at %></p>
+ </div>
+</div>
+<%= link_to "編集する", edit_tweet_path(@tweet.id) %>
+<%= link_to "Tweet一覧に戻る", tweets_path %>

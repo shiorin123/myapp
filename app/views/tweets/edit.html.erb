@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/hihi.scss">
+
+
+
+<%= form_for @tweet do |f| %>
+  <div class="box76">
+    <div class="shiori">
+      <%= f.label :name %>
+    </div>
+      <%= f.text_field :name, :size => 140 %> 
+  </div>
+
+  <div class="box78">
+    <div class="shiori1">
+      <%= f.label :store %>
+    </div>
+    <%= f.text_field :store, :size => 140 %> 
+    </div>
+
+  <div class="ren">
+    <%= f.submit "編集する" %>
+  </div>
+  <% end %>
+

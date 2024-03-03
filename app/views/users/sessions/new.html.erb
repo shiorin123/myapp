@@ -1,0 +1,42 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/login.scss">
+<div class="login">
+  <div class="login_box">
+    <div class="title_area">
+      <div class="title">login</div>
+    </div>
+    <div class="field_area">
+
+      <h2>ログイン</h2>
+      <p>※登録したメールアドレスとパスワードを入力してください。</p>
+    </div>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <h2>e-mail </h2><br />
+          <%= f.email_field :email, autofocus: true, autocomplete:"email" , placeholder: "email" %>
+        </div>
+
+        <div class="field">
+          <h2>password </h2><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <% if devise_mapping.rememberable? -%>
+            <%= f.check_box :remember_me %>
+            <h2>私を覚える</h2>
+          <% end %>
+        </div>
+          
+        
+          <div class="actions">
+          
+            <%= f.submit "Log in" , class: "submit_button" %>
+          </div>
+        
+      <% end %>
+
+
+      <%= render "users/shared/links" %>
+  </div>
+</div>

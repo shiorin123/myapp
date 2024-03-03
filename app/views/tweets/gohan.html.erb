@@ -1,0 +1,95 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/gohan.scss">
+<div class="title_2">
+ ＃おかず系パン
+</div>
+
+<div class="bl_media_container">
+        <div class="bl_media_itemWrapper">
+                <div class="bl_media_item">
+                        <p class="img"><img src="img/..." alt=""></p>
+                        <% @tweets.each do |t| %>
+                                <% if t.category == "おかず系" %> 
+                                        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+                                        <%= t.user.email %>
+                                        <%= t.name %>
+                                        <%= t.store %>
+                                <% end %> 
+                        <% end %>
+                </div>
+        </div>
+        <div class="bl_media_itemWrapper">
+                <div class="bl_media_item">
+                        <p class="img"><img src="img/..." alt=""></p>
+                        <% @tweets.each do |t| %>
+                                <% if t.category == "おかず系" %> 
+                                        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+                                        <%= t.user.email %>
+                                        <%= t.name %>
+                                        <%= t.store %>
+                                <% end %> 
+                        <% end %>
+                </div>
+        </div>
+    <div class="bl_media_itemWrapper">
+      <div class="bl_media_item">
+      <p class="img"><img src="img/..." alt=""></p>
+<% @tweets.each do |t| %>
+        <% if t.category == "おかず系" %> 
+        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+               <%= t.user.email %>
+               <%= t.name %>
+               <%= t.store %>
+<% end %> 
+<% end %>
+        </div>
+    </div>
+    <div class="bl_media_itemWrapper">
+      <div class="bl_media_item">
+      <p class="img"><img src="img/..." alt=""></p>
+<% @tweets.each do |t| %>
+        <% if t.category == "おかず系" %> 
+        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+               <%= t.user.email %>
+               <%= t.name %>
+               <%= t.store %>
+<% end %> 
+<% end %>
+        </div>
+    </div>
+    <div class="bl_media_itemWrapper">
+      <div class="bl_media_item">
+      <p class="img"><img src="img/..." alt=""></p>
+<% @tweets.each do |t| %>
+        <% if t.category == "おかず系" %> 
+        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+               <%= t.user.email %>
+               <%= t.name %>
+               <%= t.store %>
+<% end %> 
+<% end %>
+        </div>
+    </div>
+    <div class="bl_media_itemWrapper">
+      <div class="bl_media_item">
+      <p class="img"><img src="img/..." alt=""></p>
+<% @tweets.each do |t| %>
+        <% if t.category == "おかず系" %> 
+        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+               <%= t.user.email %>
+               <%= t.name %>
+               <%= t.store %>
+<% end %> 
+<% end %>
+        </div>
+    </div>
+</div>
+
+<div class="nav-links">
+  <a class="prev page-numbers" href="http://localhost:3000/tweets/gohan">«</a><!-- 現在の前のページへのリンク -->
+  <a class="page-numbers" href="http://localhost:3000/tweets/gohan">1</a>
+  <span class="page-numbers current">2</span><!-- 現在閲覧しているページ -->
+  <a class="page-numbers" href="http://localhost:3000/tweets/gohan">3</a>
+  <span class="page-numbers dots">…</span>
+  <a class="page-numbers" href="http://localhost:3000/tweets/gohan/page/10">10</a>
+  <a class="next page-numbers" href="http://localhost:3000/tweets/gohan/page/3">»</a><!-- 現在の次のページへのリンク -->
+</div>

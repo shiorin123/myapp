@@ -1,0 +1,266 @@
+// Place all the styles related to the hello controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    font-family: serif;
+  }
+  .happy {
+    font-size: 50px;
+    font-family: serif;
+    color: white !important;
+    text-shadow: 1px 2px 3px #808080;
+    z-index: auto;
+    text-align: center;
+    margin-top: 220px;
+  }
+  .img-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .s01{
+    text-anchor: start; dominant-baseline: hanging;
+    &.active{
+      stroke-dasharray: 500; //線の間隔
+      stroke: #333;
+      animation-name: kf_s01;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+  @keyframes kf_s01 {
+    0%{
+      stroke-dashoffset: 500; //線の開始位置
+      stroke-width: 1px;
+      fill: transparent;
+    }
+    40% {
+      fill: transparent;
+    }
+    60% {
+      stroke-width: 1px;
+    }
+    90% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-width: 0px;
+      fill: #333;
+    }
+    }
+  
+  .img-wrap:before,
+  .img-wrap:after {
+    animation: 2s cubic-bezier(.4, 0, .2, 1) forwards;
+    background: #fff;
+    bottom: 0;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  
+  .img-wrap:before {
+    animation-name: img-wrap-before;
+    left: 0;
+    right: 50%;
+  }
+
+  @keyframes kf_c02 {
+    100%{
+      background-position: 0% 100%;
+    }
+  }
+  
+  .img-wrap:after {
+    animation-name: img-wrap-after;
+    left: 50%;
+    right: 0;
+  }
+  
+  @keyframes img-wrap-before {
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  @keyframes img-wrap-after {
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  .title-container {
+    text-align: center;
+  }
+  
+#first-block {
+  background-image:url("index,css/../assets/sample9.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+  background-color:rgba(255,255,255,0.8);
+  z-index: -1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top: -302px;
+}
+
+
+h1 {
+  font-size: 80px;
+  font-family: serif;
+  color: #444;
+}
+
+h3 {
+  font-size: 50px;
+  font-family: serif;
+  color: #444;
+  height: 10px;
+  width: 100%;
+}
+
+#second-block {
+  background-color: #F9CD6C;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.info-title {
+  font-size: 60px;
+  font-family: serif;
+  margin-bottom: 20px;
+  color: #444;
+  text-align: center;
+}
+.info-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #444;
+
+  width: 30%;
+}
+
+.font-small {
+  font-size: 15px;
+}
+
+#third-block {
+  background-color: #FEF2D2;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.event-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 100px;
+}
+
+.events-title {
+  font-size: 60px;
+  font-family: serif;
+  color: #444;
+}
+
+.event_box{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.event {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+}
+.event_box1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-name {
+  font-size: 23px;
+  padding: 100px;
+  width: 45%;
+}
+
+span {
+  font-size: 40px;
+  font-family: serif;
+}
+
+.event2{
+    width: 500px;
+    height: 500px;
+}
+
+.event1{
+    width: 500px;
+    height: 500px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FEF2D2;
+}
+
+@keyframes infinity-scroll-left {
+    from {
+      transform: translateX(0);
+    }
+      to {
+      transform: translateX(-100%);
+    }
+    }
+    .scroll-infinity__wrap {
+      display: flex;
+      overflow: hidden;
+    }
+    .scroll-infinity__list {
+      display: flex;
+      list-style: none;
+      padding: 0
+    }
+    .scroll-infinity__list--left {
+      animation: infinity-scroll-left 80s infinite linear 0.5s both;
+    }
+    .scroll-infinity__item {
+      width: calc(100vw / 6);
+    }
+    .scroll-infinity__item>img {
+      width: 100%;
+    }
+@keyframes infinity-scroll-right {
+  from {
+    transform: translateX(-100%);
+  }
+    to {
+    transform: translateX(0%);
+  }
+  }
+  .scroll-infinity__list--right{
+    animation :infinity-scroll-right 40s infinite linear 0.5s both;
+  }

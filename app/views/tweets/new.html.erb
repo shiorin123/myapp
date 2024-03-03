@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag 'new', :media => "all" %>
+
+<div class="bg_pattern Polka"></div>
+
+<div class="main">
+
+
+   <%= form_for @tweet do |f| %>
+  </div>
+  <div class="field">
+    <p class="title">投稿フォーム</p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :size => 140 %>
+    <%= f.label :store %>
+    <%= f.text_field :store,size: 140 %>
+    <%= f.select :category, [["ハード", "hard"], ["ソフト", "soft"], ["スウィート", "sweet"], ["ごはん", "gohan"]],include_blank: "どの投稿？" %>
+  </div>
+</div>
+
+  <div class="field">
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+  </div>
+
+  <div class="radio01">
+  <div class="radio-area">
+      <input type="radio" name="rdo_bg" id="rdobg1" checked="">
+      <label for="rdobg1">hard</label>
+  </div>
+  <div class="radio-area">
+      <input type="radio" name="rdo_bg" id="rdobg2">
+      <label for="rdobg2">soft</label>
+  </div>
+  <div class="radio-area">
+      <input type="radio" name="rdo_bg" id="rdobg3">
+      <label for="rdobg3">sweet</label>
+  </div>
+  <div class="radio-area">
+      <input type="radio" name="rdo_bg" id="rdobg4">
+      <label for="rdobg4">gohan</label>
+  </div>
+</div>
+ <div class="love">
+   <%= f.submit "投稿" %>
+  </div>
+ <% end %>
+<div class="so">
+  <%= link_to "Tweet一覧に戻る", tweets_path %>
+</div>

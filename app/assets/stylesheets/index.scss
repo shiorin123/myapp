@@ -1,0 +1,43 @@
+
+.tweets-container {
+    width: 50%;
+    margin: 10px auto;
+    display:flex;
+    width: 100%;
+  }
+  h3 {
+    width: 100px;
+    margin: 30px auto;
+    text-align: center;
+    
+  }
+  .tweet5 {
+    border-top: solid #ffe1c0;
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+  .time {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .king{
+    font-size: 40px;
+    text-align: center;
+  }
+  .prince{
+    text-align: center;
+  }
+
+  .yum{
+    text-align: center;
+  }
+  
+
+  .tweets-container{
+    display:flex;
+    width: 100%;
+}
+
+.tweets{
+    width: 33%;
+}

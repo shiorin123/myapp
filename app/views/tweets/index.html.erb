@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="stylesheets/index.scss">
+
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+  <div class="king">
+    Tweet一覧
+  </div>
+
+  <div class="yum">
+  <%= link_to 'hard', tweets_hard_path%>
+  <%= link_to 'soft',  tweets_soft_path%>
+  <%= link_to 'sweet', tweets_sweet_path%>
+  <%= link_to 'gohan',  tweets_gohan_path%>
+  </div>
+
+
+  <div class="prince">
+    <%= link_to "新規投稿", tweets_new_path %>
+  </div>
+
+  <div class="tweets-container">
+    <% @tweets.each do |t| %>
+    <div class="tweet5">
+      <article>
+      <a href="tweets_hard_path">
+        <%= image_tag t.image_url, size: "90x200" if t.image? %>
+        <%= t.user.email %>
+        <%= t.name %>
+        <%= t.store %>
+        <%= t.category %>
+      </a>
+     </article>
+
+
+      <%= link_to "詳細へ", tweet_path(t.id) %>
+      <%= link_to "編集する", edit_tweet_path(t.id) %>
+      <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+  
+      <% end %>   
+    </div>
+</div>
